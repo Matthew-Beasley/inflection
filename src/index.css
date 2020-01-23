@@ -2,3 +2,45 @@ body {
   margin: 3rem;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
 }
+
+.App {
+  display: flex;
+  flex-direction: column;;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  height: 1.5rem;
+  font-size: 1.4rem;
+}
+
+button {
+  width: 7rem;
+  height: 1.5rem;
+  font-size: 1rem;
+  background-color: lightgray;
+}
+
+.output-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.output-section > div {
+  width: 10rem;
+  height: 4rem;
+  text-align: center;
+  border: 1px solid black;
+  margin: 1rem;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+
