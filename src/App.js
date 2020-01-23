@@ -1,26 +1,8 @@
 import React, { useState } from 'react';
-import inflection, {plural, singular} from 'inflection';
+import inflection, { plural, singular } from 'inflection';
+import Input from './Input';
+import Output from './Output';
 import './App.css';
-
-const Output = ({wordCards, deleteCards}) => {
-  return (
-    <div className="output-section">
-      {wordCards.map(card => {
-        return (
-          <div className="card" key={card.key}>
-            <p>{card.singular}</p>
-            <p>{card.plural}</p>
-            <button onClick={(ev) => deleteCards(card)}>X</button>
-          </div>
-        )
-      })}
-    </div>
-  )
-}
-
-
-
-
 
 
 function App() {
@@ -47,10 +29,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className="input-section">
-        <input type="text" value={word} onChange={(ev) => setWord(ev.target.value)}></input>
-        <button onClick={(ev) => getCards(ev)}>Get Word</button>
-      </div>
+      <Input word={word} setWord={setWord} getCards={getCards} />
       <Output wordCards={wordCards} deleteCards={deleteCards}/>
     </div>
   );
